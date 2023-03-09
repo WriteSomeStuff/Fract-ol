@@ -17,12 +17,12 @@ static uint32_t	ft_interpolate(uint32_t color1, uint32_t color2, float fraction)
 	t_color	c1;
 	t_color	c2;
 
-	c1.r = color1 >> 24;
-	c2.r = color2 >> 24;
-	c1.g = color1 >> 16;
-	c2.g = color2 >> 16;
-	c1.b = color1 >> 8;
-	c2.b = color2 >> 8;
+	c1.r = (color1 >> 24) & 0xff;
+	c2.r = (color2 >> 24) & 0xff;
+	c1.g = (color1 >> 16) & 0xff;
+	c2.g = (color2 >> 16) & 0xff;
+	c1.b = (color1 >> 8) & 0xff;
+	c2.b = (color2 >> 8) & 0xff;
 	return ((uint32_t)(((c2.r - c1.r) * fraction) + c1.r) << 24 | \
 			(uint32_t)(((c2.g - c1.g) * fraction) + c1.g) << 16 | \
 			(uint32_t)(((c2.b - c1.b) * fraction) + c1.b) << 8 | 255);
