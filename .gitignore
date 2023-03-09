@@ -1,0 +1,7 @@
+*.o
+*.out
+*.a
+.DS_Store
+fractol
+.vscode
+*.dSYM
