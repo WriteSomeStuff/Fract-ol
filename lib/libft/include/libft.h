@@ -20,6 +20,8 @@
 # include <unistd.h>
 # include <stdbool.h>
 # include <limits.h>
+# include "ft_printf.h"
+# include "gnl.h"
 
 typedef struct s_list
 {
