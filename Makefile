@@ -6,15 +6,15 @@
 #    By: cschabra <cschabra@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 18:15:02 by cschabra      #+#    #+#                  #
-#    Updated: 2023/03/09 12:06:52 by cschabra      ########   odam.nl          #
+#    Updated: 2023/03/13 15:43:09 by cschabra      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= fractol
 CFLAGS= -Wall -Wextra -Werror -Ofast $(HEADERS) #-fsanitize=address 
 
-LIBFT= lib/libft
-LIBMLX= lib/MLX42
+LIBFT= 42lib/libft
+LIBMLX= 42lib/MLX42
 
 HEADERS= -I include -I $(LIBFT)/include -I $(LIBMLX)/include
 LIBS= $(LIBFT)/libft.a $(LIBMLX)/build/libmlx42.a
