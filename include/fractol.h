@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   fractol.h                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-la-h <main@w2wizard.dev>                 +#+                     */
+/*   By: cschabra <cschabra@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/30 14:14:42 by cschabra      #+#    #+#                 */
-/*   Updated: 2023/03/09 12:09:14 by cschabra      ########   odam.nl         */
+/*   Updated: 2023/08/01 15:29:29 by cschabra      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
