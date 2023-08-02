@@ -19,4 +19,3 @@ or
 
 - You can resize the window and you can close the window with ESC.
 
-I'll fix bugs at a later date, planning to improve this project. Other projects are keeping me busy at the moment :)
