@@ -6,7 +6,7 @@
 /*   By: cschabra <cschabra@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/26 13:33:41 by cschabra      #+#    #+#                 */
-/*   Updated: 2023/03/15 17:22:25 by cschabra      ########   odam.nl         */
+/*   Updated: 2023/08/02 14:36:18 by cschabra      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ static t_fractal_func	ft_get_render(int32_t argc, char *input)
 	return (NULL);
 }
 
-void	ft_hooks(t_init instance)
+void	ft_hooks(t_init *instance)
 {
-	mlx_key_hook(instance.mlx, ft_keypress, &instance);
-	mlx_cursor_hook(instance.mlx, ft_mousepos, &instance);
-	mlx_scroll_hook(instance.mlx, ft_scroll, &instance);
-	mlx_resize_hook(instance.mlx, ft_resize, &instance);
+	mlx_key_hook(instance->mlx, ft_keypress, instance);
+	mlx_cursor_hook(instance->mlx, ft_mousepos, instance);
+	mlx_scroll_hook(instance->mlx, ft_scroll, instance);
+	mlx_resize_hook(instance->mlx, ft_resize, instance);
 }
 
 bool	ft_init(t_init *instance)
@@ -99,7 +99,7 @@ int32_t	main(int32_t argc, char **argv)
 		mlx_terminate(instance.mlx);
 		return (EXIT_FAILURE);
 	}
-	ft_hooks(instance);
+	ft_hooks(&instance);
 	mlx_loop(instance.mlx);
 	mlx_terminate(instance.mlx);
 	return (EXIT_SUCCESS);
