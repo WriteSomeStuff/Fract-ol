@@ -1,5 +1,5 @@
 # Fract-ol - @Codam
-Mandelbrot and Julia fractals made with *MLX42* graphics library.
+Mandelbrot and Julia fractals made with *[MLX42](https://github.com/codam-coding-college/MLX42)* graphics library.
 
 ## How does it work?
 
