@@ -15,7 +15,7 @@ or
 
 - Zoom in or out with scroll (it follows mouse position). It will take some getting used to.
 
-- You can use arrowkeys to move around.
+- You can use arrow keys to move around.
 
 - You can resize the window and you can close the window with ESC.
 
