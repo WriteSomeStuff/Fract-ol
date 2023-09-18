@@ -6,12 +6,12 @@
 #    By: cschabra <cschabra@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 18:15:02 by cschabra      #+#    #+#                  #
-#    Updated: 2023/03/13 15:43:09 by cschabra      ########   odam.nl          #
+#    Updated: 2023/09/18 14:35:21 by cschabra      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= fractol
-CFLAGS= -Wall -Wextra -Werror -Ofast $(HEADERS) #-fsanitize=address 
+CFLAGS= -Wall -Wextra -Werror -Ofast $(HEADERS) -fsanitize=address 
 
 LIBFT= 42lib/libft
 LIBMLX= 42lib/MLX42
@@ -36,7 +36,8 @@ mlx:
 
 $(NAME): mlx $(OBJECTS)
 	@$(MAKE) -C $(LIBFT)
-	@$(CC) -o $(NAME) -lm $(CFLAGS) $(CFILES) $(LIBS) -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit
+	@$(CC) -o $(NAME) -lm $(CFLAGS) $(CFILES) $(LIBS) -ldl -lglfw -pthread
+# for macOS: -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit
 
 clean:
 	rm  -f $(OBJECTS)
