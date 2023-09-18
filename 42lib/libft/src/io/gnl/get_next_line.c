@@ -6,7 +6,7 @@
 /*   By: cschabra <cschabra@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 18:09:11 by cschabra      #+#    #+#                 */
-/*   Updated: 2023/03/08 20:35:51 by cschabra      ########   odam.nl         */
+/*   Updated: 2023/09/18 14:22:00 by cschabra      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,9 @@ static char	*ft_read(char *store, int fd)
 char	*get_next_line(int fd)
 {
 	char		*ans;
-	static char	*store[OPEN_MAX];
+	static char	*store[FOPEN_MAX];
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
 	if (!store[fd])
 	{
