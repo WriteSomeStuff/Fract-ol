@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME= fractol
-CFLAGS= -Wall -Wextra -Werror -Ofast $(HEADERS) -fsanitize=address 
+CFLAGS= -Wall -Wextra -Werror -Ofast $(HEADERS) #-fsanitize=address 
 
 LIBFT= 42lib/libft
 LIBMLX= 42lib/MLX42
